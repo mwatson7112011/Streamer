@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Streamer</title>
+
+<style>
+    body {
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+    }
+
+    img {
+        width: 260px;
+        border-radius: 12px;
+        cursor: pointer;
+        opacity: 0;
+        animation: fadeIn 1s forwards, breathe 4s ease-in-out infinite;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    img:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 25px rgba(255, 215, 0, 0.75);
+    }
+
+    @keyframes fadeIn { to { opacity: 1; } }
+
+    @keyframes breathe {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.03); }
+    }
+</style>
+
+<script>
+    // Hub only needs to send open:service
+    function openService(service) {
+        window.ipc.postMessage("open:" + service);
+    }
+</script>
+</head>
+<body>
+<div class="grid">
+    <img src="peacock.jpg" alt="Peacock" onclick="openService('peacock')">
+    <img src="Max.jpg" alt="HBO Max" onclick="openService('hbomax')">
+    <img src="disney+.jpg" alt="Disney+" onclick="openService('disney')">
+
+    <img src="starz.jpg" alt="Starz" onclick="openService('starz')">
+    <img src="paramount+.jpg" alt="Paramount+" onclick="openService('paramount')">
+    <img src="netflix.jpg" alt="Netflix" onclick="openService('netflix')">
+
+    <img src="hulu.jpg" alt="Hulu" onclick="openService('hulu')">
+    <img src="tubi.jpg" alt="Tubi" onclick="openService('tubi')">
+    <img src="appletv.png" alt="appletv" onclick="openService('appletv')">
+</div>
+</body>
+</html>

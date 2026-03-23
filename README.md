@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Streamer (Rust + Tao/Wry)
 Streamer is a fullscreen desktop streaming launcher built using Rust, Tao, and Wry.
 Unlike the web version, this desktop version can load streaming services such as Netflix, Hulu, Max, Paramount+, and others inside the application window, thanks to a native WebView.
@@ -202,32 +201,3 @@ Navigation is instant and reliable.
 
 5. The hub rebuild ensures a consistent UI
 No matter what site the user visits.
-=======
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> 29101c4dd0941d2a15ff6501d1e2d67082c20fc2
-
-
-
-
-
-
-
-
-
-
